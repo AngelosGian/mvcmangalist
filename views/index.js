@@ -55,7 +55,7 @@
             <% //Object.keys(mangalist).forEach( el => {%> 
             <% mangalist.forEach( (el)=> {%> 
         <div class="row manga-table striped" data-id='<%=el._id%>'>
-            <!-- <div class="col">
+            <div class="col">
                 <p class="text-center"><%= el.title %></p>
             </div>
             <div class="col">
@@ -66,19 +66,7 @@
             </div>
             <div class="col ">
                 <span  class="btn btn-danger del">Delete</span>
-            </div> -->
-            <span class="col text-center">
-                <%= el.title %>
-            </span>
-            <span class="col text-center">
-                <%= el.volumes %>
-            </span>
-            <span class="col text-center">
-                <%= el.completed %>
-            </span>
-            <span class="col text-center btn btn-danger del">
-                Delete                
-            </span>
+            </div>
         </div>
         <% }) %>
     </section> 
