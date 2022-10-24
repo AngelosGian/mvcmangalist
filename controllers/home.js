@@ -1,7 +1,8 @@
 const Manga = require('../models/Manga')
 module.exports = {
-    getIndex: (req,res)=>{
-        res.render('index.ejs')
+    getIndex: async (req,res)=>{
+        const mangas = await Manga.find().lean()
+        res.render('index.ejs', {mangas: mangas})
     },
     createManga: (req,res)=>{
         Manga.create({
