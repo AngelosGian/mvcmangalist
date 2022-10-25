@@ -19,8 +19,8 @@
         </div>
         <% //for (var i = 0; i < mangalist.length; i++) { %>
             <% //Object.keys(mangalist).forEach( el => {%> 
-            <% mangalist.forEach( (el)=> {%> 
-        <div class="row manga-table striped" data-id='<%=el._id%>'>
+            <% mangas.forEach( (el)=> {%> 
+        <div class="row manga-table striped" data-id='<%= el._id %>'>
             <div class="col">
                 <p class="text-center"><%= el.title %></p>
             </div>
