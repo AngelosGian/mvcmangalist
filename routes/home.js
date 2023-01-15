@@ -4,5 +4,6 @@ const homeController = require('../controllers/home')
 
 
 routes.get('/', homeController.getIndex)
+routes.get('/form',homeController.getForm)
 
 module.exports = routes

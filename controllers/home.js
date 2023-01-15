@@ -12,6 +12,9 @@ module.exports = {
         
         })
         
-        res.redirect('/')
+        res.redirect('/form')
+    },
+    getForm: async (req, res) => {
+        res.render('form.ejs')
     }
 }

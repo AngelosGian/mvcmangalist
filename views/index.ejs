@@ -37,31 +37,4 @@
         <% }) %>
     </section> 
     
-    <section class="container mt-5">
-        <form action="/mangalist" method="POST">
-            <div class="row">
-                <div class="col-md-3">
-                    <input type="text" class="form-control" id="manga-title" name="mangatitle"placeholder="Title">
-                </div>
-                <div class="col-md-3">
-
-                    <input type="text" class="form-control" id="manga-volumes" name="mangavolumes" placeholder="Volumes">
-                </div>
-                <div class="col-md-3">
-                    <label class="form-check-label"for="manga-completed">
-
-                        <!-- <input type="checkbox" class="form-check-input" id="manga-completed" name="mangacompleted"> -->
-                        <select name="mangacompleted" class="form-select" id="manga-completed">
-                            <option value="">--choose--</option>
-                            <option value="finished">Finished</option>
-                            <option value="ongoing">Ongoing</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="col-md-3">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </form>
-    </section>
     <%- include('partials/footer') %>
