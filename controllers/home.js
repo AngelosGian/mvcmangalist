@@ -12,7 +12,11 @@ module.exports = {
         
         })
         
-        res.redirect('/form')
+        res.redirect('/')
+    },
+    deleteManga: async (req,res)=>{
+        mangas.findOneAndDelete({_id: req.body.mangaIdFromJSFile})
+        res.json('Deleted It')
     },
     getForm: async (req, res) => {
         res.render('form.ejs')

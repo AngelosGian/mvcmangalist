@@ -4,17 +4,16 @@
 //     mangaTable.classList.add('table-primary')
 // }
 
-const deleteBtn = document.querySelectorAll('.del')
+const deleteBtns = document.querySelectorAll('.del')
 
-Array.from(deleteBtn).forEach((el)=>{
-// deleteBtn.forEach((el)=>{
+Array.from(deleteBtns).forEach((el)=>{
     el.addEventListener('click', deleteManga, false)
 })
 
 
-async function deleteManga() {
-    const parentRow = this.closest('.manga-table');
-    const mangaId = parentRow.dataset.id;
+async function deleteManga(event) {
+
+    const mangaId = event.target.dataset.id
     // const  mangaId = document.querySelector('.manga-table').dataset.id;
    
     try{

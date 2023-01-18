@@ -20,7 +20,7 @@
         <% //for (var i = 0; i < mangalist.length; i++) { %>
             <% //Object.keys(mangalist).forEach( el => {%> 
             <% mangas.forEach( (el)=> {%> 
-        <div class="row manga-table striped" data-id='<%= el._id %>'>
+        <div class="row manga-table striped" >
             <div class="col">
                 <p class="text-center"><%= el.title %></p>
             </div>
@@ -31,7 +31,7 @@
                 <p class="text-center"><%= el.completed %></p>
             </div>
             <div class="col ">
-                <span  class="btn btn-danger del">Delete</span>
+                <span  class="btn btn-danger del" data-id='<%= el._id %>'>Delete</span>
             </div>
         </div>
         <% }) %>
