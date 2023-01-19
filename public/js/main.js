@@ -1,9 +1,3 @@
-// let mangaTable = document.querySelector('.manga-table');
-// console.log(mangaTable);
-// if(mangaTable.length % 2 === 0){
-//     mangaTable.classList.add('table-primary')
-// }
-
 const deleteBtns = document.querySelectorAll('.del')
 
 Array.from(deleteBtns).forEach((el)=>{
@@ -14,7 +8,6 @@ Array.from(deleteBtns).forEach((el)=>{
 async function deleteManga(event) {
 
     const mangaId = event.target.dataset.id
-    // const  mangaId = document.querySelector('.manga-table').dataset.id;
    
     try{
         const response = await fetch('mangas/deletemanga',{
@@ -31,9 +24,3 @@ async function deleteManga(event) {
         console.error(err)
     }
 }
-
-
-
-// for(let i=0; i<deleteBtn.length; i++){
-//     deleteBtn[i].addEventListener('click', deleteManga)
-// }
